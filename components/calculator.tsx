@@ -12,9 +12,9 @@ export const Claculator = ()  => {
 
     return (
         <>
-        <div className='flex flex-col  w-full '>
+        <div className='flex flex-col w-full h-[5rem]' data-testid="input">
             <input type="text" pattern='\d*' maxLength={4} className='text-black w-[30%] self-center'  onChange={handleChange}/>
-            <label className='mt-5 text-3xl'>{result}</label>
+            <label className='mt-5 text-3xl' data-testid="result">{result}</label>
         </div>
         </>
     )
