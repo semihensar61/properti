@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { Claculator } from '../components/calculator'
 
 export default function Home() {
   return (
@@ -6,6 +7,7 @@ export default function Home() {
       <Head>
         <title>Roman calculator App </title>
       </Head>
+      <Claculator></Claculator>
     </>
   )
 }
