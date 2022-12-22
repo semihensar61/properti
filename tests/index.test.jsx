@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen, fireEvent } from '@testing-library/react'
 import Home from '../pages/index'
 import '@testing-library/jest-dom'
 
@@ -10,4 +10,13 @@ describe('Roman Num calculator', () => {
         expect(screen.getByTestId("result")).toBeInTheDocument();
         expect(screen.getByTestId("input")).toBeInTheDocument();
     })
+
+    it("calculation 11", () => {
+        render(<Home />);
+        // check if calculate properly
+        const number = screen.getByTestId("input");
+        const resultArea = screen.getByTestId("result");
+        fireEvent.change(number, { target: { value: 11 } });
+        expect(resultArea).toHaveTextContent("XI");
+    });
 })
