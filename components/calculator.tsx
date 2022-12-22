@@ -7,7 +7,7 @@ export const Claculator = ()  => {
   return (
     <>
       <div className=''>
-        Basic Roman calculator
+        <input type="number" className='text-black'/>
       </div>
     </>
   )
